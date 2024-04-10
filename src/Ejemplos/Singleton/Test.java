@@ -33,6 +33,7 @@ public class Test
         Test myTest3 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "dora123", "dora123");
         // Conexión con clase alternativa. Se crea otra conexión al ser otro tipo de clase.
         myTest1 = new Test();
+        //hola
     }
 }
 
