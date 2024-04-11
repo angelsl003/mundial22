@@ -32,7 +32,7 @@ public class Jugador {
     /**
      * El menú
      */
-    public static void menu(){
+    /*public static void menu(){
         System.out.println("1:Guardar los jugadores en un fichero");
         System.out.println("2:Ordenar y mostrar los jugadores de un fichero");
         System.out.println("-1:Salir del programa");
@@ -44,7 +44,7 @@ public class Jugador {
      * @param archivo
      * @throws IOException
      */
-    public static void guardarJugadores(ArrayList<Jugador> jugadores, File archivo) throws IOException {
+    /*public static void guardarJugadores(ArrayList<Jugador> jugadores, File archivo) throws IOException {
         DataOutputStream guardar=new DataOutputStream(new FileOutputStream(archivo));
         try{
             for(int i=0;i<jugadores.size();i++){
@@ -67,7 +67,7 @@ public class Jugador {
         }finally {
             guardar.close();
         }
-    }
+    }*/
 
     /**
      *
@@ -108,7 +108,7 @@ public class Jugador {
      *
      * @param jugadores
      */
-    public static void ordenar(ArrayList<Jugador> jugadores){
+    /*public static void ordenar(ArrayList<Jugador> jugadores){
         int numJugadores = jugadores.size();
         Jugador temp;
         for(int i=0; i < numJugadores; i++){
@@ -127,7 +127,7 @@ public class Jugador {
      *
      * @param jugadores
      */
-    public static void mostrar(ArrayList<Jugador> jugadores){
+    /*public static void mostrar(ArrayList<Jugador> jugadores){
         System.out.println("Código del país\t\tNombre del jugador\t\tAño de nacimiento\t\tAltura\t\tClub");
         for(int i=0;i<jugadores.size();i++){
             System.out.print("\t"+jugadores.get(i).codPais+"\t\t\t");
@@ -150,5 +150,5 @@ public class Jugador {
             nombre+=" ";
         }
         return nombre;
-    }
+    }*/
 }

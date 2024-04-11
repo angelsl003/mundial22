@@ -14,7 +14,7 @@ public class Seleccion {
      * @param args
      * @throws IOException
      */
-    public static void main(String[] args) throws IOException {
+    /*public static void main(String[] args) throws IOException {
         Scanner esc=new Scanner(System.in);
         int opcion;
         String nombreArchivo="dinamarca.txt";
@@ -87,5 +87,5 @@ public class Seleccion {
             }
         }
         System.out.println("Gracias por usar el programa");
-    }
+    }*/
 }
