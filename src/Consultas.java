@@ -38,4 +38,37 @@ public class Consultas {
             }
         }
     }
+
+    public static void jugadoresPorPais (int pais){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        try{
+            statement = con.createStatement();
+            resultSet = statement.executeQuery("select nombre_jugador from jugadores j \n where cod_pais="+pais);
+            while (resultSet.next()){
+                System.out.println(resultSet.getString(1));
+            }
+        }catch (SQLException e){
+            System.out.println("Error "+e.getMessage());
+        }finally {
+            try{
+                if(statement!=null){
+                    statement.close();
+                }
+            }catch (java.sql.SQLException ex){
+                System.out.println("Error "+ex.getMessage());
+            }
+            try {
+                if(resultSet!=null){
+                    resultSet.close();
+                }
+            }catch (java.sql.SQLException ex){
+                System.out.println("Error "+ex.getMessage());
+            }
+        }
+    }
+
+    public static void main(String[] args) throws SQLException {
+        jugadoresPorPais(14);
+    }
 }

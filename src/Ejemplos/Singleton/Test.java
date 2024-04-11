@@ -14,7 +14,7 @@ public class Test
 
     public static void main(String[] args) {
         // Comprobamos el funcionamiento de Connection::close() para una conexión no establecida
-        Test myTest1 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "angel123", "secret");
+        Test myTest1 = new Test("jdbc:mysql://localhost/mundialAngel" , "angelTest", "1234");
         try {
             Test.con.close();
         }catch(Exception e){
