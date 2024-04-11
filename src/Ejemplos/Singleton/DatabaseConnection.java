@@ -43,9 +43,9 @@ public class DatabaseConnection
 
         if(con==null){
             try {
-                String host = "jdbc:mysql://localhost:33060/mundialAngel";
-                String username = "angelTest";
-                String password = "1234";
+                String host = "jdbc:mysql://192.168.201.112:33060/mundial22";
+                String username = "dora123";
+                String password = "dora123";
                 con = java.sql.DriverManager.getConnection( host, username, password );
                 System.out.println("Conexión realizada");
             } catch (java.sql.SQLException ex) {

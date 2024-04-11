@@ -4,3 +4,4 @@
 4-Baja de un registro. Preguntar por nombre (pk)
 5-Modificación de un registro (no me acuerdo como se hace lmao)
 6-Leer un .dat e importarlos a la base de datos
+7-Crear un menú

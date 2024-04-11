@@ -5,7 +5,7 @@ public class Test
     //static java.sql.Connection con = DatabaseConnection.getInstance().getConnection();
     public static java.sql.Connection con;
     public Test(){
-        con = DatabaseConnection.getInstance().getConnection();
+        //con = DatabaseConnection.getInstance().getConnection();
 
     }
     public Test(String url, String user, String password){
@@ -14,15 +14,15 @@ public class Test
 
     public static void main(String[] args) {
         // Comprobamos el funcionamiento de Connection::close() para una conexión no establecida
-        Test myTest1 = new Test("jdbc:mysql://localhost:33060/testing", "xesting", "secret");
+        Test myTest1 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "angel123", "secret");
         try {
             Test.con.close();
         }catch(Exception e){
             System.out.println("Error forzado de usuario");
         }
         // Establecemos conexión correcta y comprobamos efecto singleton
-        Test myTest2 = new Test("jdbc:mysql://localhost:33060/testing", "testing1", "secret");
-        myTest1 = new Test("jdbc:mysql://localhost:33060/testing", "testing1", "secret");
+        Test myTest2 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "dora123", "dora123");
+        myTest1 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "dora123", "dora123");
         // Cerramos conexión y comprobamos reconexión
         try {
             Test.con.close();
@@ -30,7 +30,7 @@ public class Test
         }catch(Exception e){
             System.out.println("E1");
         }
-        Test myTest3 = new Test("jdbc:mysql://localhost:33060/testing", "testing1", "secret");
+        Test myTest3 = new Test("jdbc:mysql://192.168.201.112:33060/mundial22", "dora123", "dora123");
         // Conexión con clase alternativa. Se crea otra conexión al ser otro tipo de clase.
         myTest1 = new Test();
     }

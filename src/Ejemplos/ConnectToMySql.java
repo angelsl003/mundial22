@@ -9,9 +9,9 @@ public class ConnectToMySql {
             Class<?> c = Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("Cargado " + c.getName());
             //Definir la url de conexión y los parámetros de usuario y contraseña
-            String host = "jdbc:mysql://localhost:33060/testing";
-            String username = "testing1";
-            String password = "secret";
+            String host = "jdbc:mysql://192.168.201.112:33060/mundial22";
+            String username = "dora123";
+            String password = "dora123";
             Connection con = DriverManager.getConnection(host, username, password);
             System.out.println("Conexión completada");
             con.close();
