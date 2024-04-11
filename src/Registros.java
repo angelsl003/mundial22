@@ -35,7 +35,7 @@ public class Registros {
 			int altura= Integer.parseInt(datos[3]);
 			String equipo=datos[4];
 			resultSet = statement.executeQuery("insert into jugadores (cod_pais, nombre_jugador, year_nacimiento, altura_cm, club) values" +
-					"(");
+					"("+pais+", "+nombre+", "+year+", "+altura+", "+equipo);
 			while (resultSet.next()){
 				System.out.println(resultSet.getString(1));
 			}
