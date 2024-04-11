@@ -1,4 +1,4 @@
-import U07.Ejemplos.A_Conexion.Singleton.DatabaseConnection;
+import Ejemplos.Singleton.DatabaseConnection;
 
 import java.sql.*;
 public class Testing {
