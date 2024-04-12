@@ -1,3 +1,5 @@
+package Seleccion;
+
 import Ejemplos.Singleton.DatabaseConnection;
 
 import java.sql.ResultSet;
