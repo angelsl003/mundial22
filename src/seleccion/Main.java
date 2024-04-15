@@ -1,10 +1,11 @@
 package seleccion;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, IOException {
         //usuario:angel123
         //pass:1234
 
@@ -17,7 +18,7 @@ public class Main {
             System.out.println("3) Añadir registro de un nuevo jugador");
             System.out.println("4) Eliminar registro");
             System.out.println("5) Modificar registro");
-            System.out.println("6) Importar jugadores desde un fichero")
+            System.out.println("6) Importar jugadores desde un fichero");
             System.out.println("\n Elige una opción. Introduce -1 para salir");
             opcionUsuario = miEscaner.nextInt();
             int codigoPaisUsr;
@@ -32,7 +33,7 @@ public class Main {
                     break;
                 case 2:
                     codigoPaisUsr = miEscaner.nextInt();
-                    Consultas.jugadoresPorPais();
+                    Consultas.jugadoresPorPais(codigoPaisUsr);
                     break;
                 case 3:
                     Registros.insertarJugador();

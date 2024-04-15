@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Registros {
 	static java.sql.Connection con= DatabaseConnection.getInstance().getConnection();
 	static Scanner esc=new Scanner(System.in);
-	static String[] elementosJugador={/*introducir los elementos*/};
+	static String[] elementosJugador={"cod_pais", "nombre_jugador", "year_nacimiento", "altura_cm", "club"};
 	public static String[] pedirDatos(){
 		String[] datos=new String[5];
 		String dato="";
@@ -92,6 +92,9 @@ public class Registros {
 			System.out.println("modificar jugador");
 			jugador= esc.nextLine();
 			System.out.println("que quieres cambiar?");
+			for (int i = 0; i<elementosJugador.length;i++){
+				System.out.print(i+1+"-"+elementosJugador[i]+"\t");
+			}
 			elemento=esc.nextInt();
 			while(elemento<1||elemento>5){
 				System.out.println("no disponible");
@@ -115,11 +118,8 @@ public class Registros {
 				}
 			}catch (java.sql.SQLException ex){
 				System.out.println("Error "+ex.getMessage());
+
 			}
 		}
-	}
-
-	public static void main(String[] args) {
-
 	}
 }

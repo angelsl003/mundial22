@@ -8,9 +8,6 @@ import java.sql.Statement;
 
 public class Consultas {
     static java.sql.Connection con= DatabaseConnection.getInstance().getConnection();
-    public Consultas(){
-
-    }
 
     public static void codigosPaises(int pais) throws SQLException {
         Statement statement = null;
