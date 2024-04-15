@@ -24,7 +24,7 @@ public class DBConnection {
     private static void setConnection(String url, String user, String password){
         try {
             connection = java.sql.DriverManager.getConnection(url, user, password);
-            System.out.println("Conexión realizada");
+            System.out.println("Conexión realizada");//TODO traza
         }catch(java.sql.SQLException e){
             System.out.println("Connecting error: getConnection() " + e.getMessage());
         }

@@ -2,16 +2,18 @@ package Seleccion;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class CargarJugadores {
-    public CargarJugadores(){
 
-    }
+    private static void cargarJugadores() throws IOException{
+        String nombreArchivo;
+        Scanner miEscaner = new Scanner(System.in);
+        System.out.println("¿Cómo se llama el archivo");
+        nombreArchivo = miEscaner.nextLine();
 
-    public static void main(String[] args) throws IOException {
-        File file=new File("archivos/dinamarca.dat");
+        File file=new File("archivos/"+ nombreArchivo );
         ArrayList<Jugador> jugadores =Jugador.leerJugadores(file);
         for(Jugador jugador : jugadores){
             System.out.print(jugador.codPais);
@@ -20,6 +22,5 @@ public class CargarJugadores {
             System.out.print(jugador.altura);
             System.out.println(jugador.club);
         }
-
     }
 }
