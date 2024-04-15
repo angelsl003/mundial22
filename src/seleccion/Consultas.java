@@ -66,4 +66,8 @@ public class Consultas {
             }
         }
     }
+
+    public static void main(String[] args) {
+        jugadoresPorPais(14);
+    }
 }

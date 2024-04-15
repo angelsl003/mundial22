@@ -14,7 +14,7 @@ public class Registros {
 		String[] datos=new String[5];
 		String dato="";
 		for(int i=0;i< datos.length;i++){
-			System.out.println("introduce");
+			System.out.println("introduce el "+elementosJugador[i]);
 			dato=esc.nextLine();
 			datos[i]=dato;
 		}
@@ -27,12 +27,12 @@ public class Registros {
 		try{
 			String[] datos=pedirDatos();
 			statement = con.createStatement();
-			int pais= Integer.parseInt(datos[0]);
+			int cod_pais= Integer.parseInt(datos[0]);
 			String nombre=datos[1];
 			int year= Integer.parseInt(datos[2]);
 			int altura= Integer.parseInt(datos[3]);
 			String equipo=datos[4];
-			sql="insert into jugadores (cod_pais, nombre_jugador, year_nacimiento, altura_cm, club) values "+pais+", "+nombre+", "+year+", "+altura+", "+equipo+")";
+			sql="insert into jugadores (cod_pais, nombre_jugador, year_nacimiento, altura_cm, club) values ("+cod_pais+", '"+nombre+"', "+year+", "+altura+", '"+equipo+"')";
 			statement.executeUpdate(sql);
 		}catch (SQLException e){
 			System.out.println("Error "+e.getMessage());

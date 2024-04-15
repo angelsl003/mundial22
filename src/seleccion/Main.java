@@ -2,6 +2,7 @@ package seleccion;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -32,6 +33,7 @@ public class Main {
                     Consultas.codigosPaises(codigoPaisUsr);
                     break;
                 case 2:
+                    System.out.println("¿De que país quieres obtener sus jugadores? Introduce su código");
                     codigoPaisUsr = miEscaner.nextInt();
                     Consultas.jugadoresPorPais(codigoPaisUsr);
                     break;

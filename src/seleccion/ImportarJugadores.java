@@ -15,7 +15,6 @@ public class ImportarJugadores {
 
     public static void importarJugadores() throws IOException, SQLException {
         Statement statement = null;
-        ResultSet resultSet = null;
         String sql="";
         try{
             statement = con.createStatement();
@@ -31,8 +30,8 @@ public class ImportarJugadores {
             }
             ArrayList<Jugador> jugadores =Jugador.leerJugadores(file);
             for(Jugador jugador : jugadores){
-                sql="insert into mundial22 values ("+jugador.nomJugador+", "+jugador.codPais+", "+jugador.yearNacimiento+", "+jugador.altura+", "+jugador.club+");";
-                resultSet= statement.executeQuery(sql);
+                sql="insert into jugadores (cod_pais, nombre_jugador, year_nacimiento, altura_cm, club) values ("+jugador.codPais+", '"+jugador.nomJugador.trim()+"', "+jugador.yearNacimiento+", "+jugador.altura+", '"+jugador.club.trim()+"')";
+                statement.executeUpdate(sql);
             }
         } catch (java.sql.SQLException ex){
             System.out.println("Error "+ex.getMessage());
