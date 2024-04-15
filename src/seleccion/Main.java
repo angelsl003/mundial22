@@ -41,7 +41,8 @@ public class Main {
                     Registros.quitarJugador();
                     break;
                 case 5:
-                    
+                    Registros.modificarJugador();
+                    break;
                 case 6:
                     ImportarJugadores.importarJugadores();
                     break;
