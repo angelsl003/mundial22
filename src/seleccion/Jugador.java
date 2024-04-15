@@ -1,4 +1,4 @@
-package Seleccion;
+package seleccion;
 
 import java.io.*;
 import java.util.ArrayList;

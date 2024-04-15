@@ -1,4 +1,4 @@
-package Ejemplos.Singleton;
+package ejemplos.singleton;
 
 public class DBConnection {
     private static DBConnection instance;

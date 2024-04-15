@@ -1,13 +1,13 @@
-package Seleccion;
+package seleccion;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class CargarJugadores {
+public class ImportarJugadores {
 
-    private static void cargarJugadores() throws IOException{
+    public static void importarJugadores() throws IOException{
         String nombreArchivo;
         Scanner miEscaner = new Scanner(System.in);
         System.out.println("¿Cómo se llama el archivo");
@@ -22,5 +22,6 @@ public class CargarJugadores {
             System.out.print(jugador.altura);
             System.out.println(jugador.club);
         }
+
     }
 }

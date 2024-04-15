@@ -1,5 +1,5 @@
-import Ejemplos.Singleton.DatabaseConnection;
-import Seleccion.Consultas;
+import ejemplos.singleton.DatabaseConnection;
+import seleccion.Consultas;
 
 import java.sql.*;
 public class Testing {

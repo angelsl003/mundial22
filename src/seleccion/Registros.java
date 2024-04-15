@@ -1,20 +1,15 @@
-package Seleccion;
+package seleccion;
 
-import Ejemplos.Singleton.DatabaseConnection;
+import ejemplos.singleton.DatabaseConnection;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Registros {
 	static java.sql.Connection con= DatabaseConnection.getInstance().getConnection();
 	static Scanner esc=new Scanner(System.in);
 	static String[] elementosJugador={/*introducir los elementos*/};
-	public Registros(){
-
-	}
 	public static String[] pedirDatos(){
 		String[] datos=new String[5];
 		String dato="";

@@ -1,6 +1,6 @@
-package Seleccion;
+package seleccion;
 
-import Ejemplos.Singleton.DatabaseConnection;
+import ejemplos.singleton.DatabaseConnection;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -68,8 +68,5 @@ public class Consultas {
                 System.out.println("Error "+ex.getMessage());
             }
         }
-    }
-
-    public static void main(String[] args) throws SQLException {
     }
 }
