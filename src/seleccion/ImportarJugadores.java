@@ -20,7 +20,7 @@ public class ImportarJugadores {
             statement = con.createStatement();
             String nombreArchivo;
             Scanner miEscaner = new Scanner(System.in);
-            System.out.println("¿Cómo se llama el archivo");
+            System.out.println("¿Cómo se llama el archivo?");
             nombreArchivo = miEscaner.nextLine();
             File file=new File("archivos/"+ nombreArchivo );
             while (!file.exists()){
