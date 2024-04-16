@@ -16,7 +16,7 @@ public class Jugador {
      * @param altura
      * @param club
      */
-    public Jugador(int codPais, String nomJugador, int yearNacimiento, float altura, String club){
+    public Jugador(int codPais, String nomJugador, int yearNacimiento, int altura, String club){
         this.codPais=codPais;
         this.nomJugador=nomJugador;
         this.yearNacimiento=yearNacimiento;
@@ -26,7 +26,7 @@ public class Jugador {
     public int codPais;
     public String nomJugador;
     public int yearNacimiento;
-    public float altura;
+    public int altura;
     public String club;
 
     /**
@@ -82,14 +82,14 @@ public class Jugador {
         ArrayList<Jugador> players= new ArrayList<Jugador>();
         try{
             for(int i=0; i<archivo.length();i+=137){
-                Jugador real =new Jugador (0,"",0,0F, "");
+                Jugador real =new Jugador (0,"",0,0, "");
                 real.codPais=leer.readInt();
                 for(int j=0;j<25;j++){
                     caracteres[j]=leer.readChar();
                 }
                 real.nomJugador=new String(caracteres);
                 real.yearNacimiento=leer.readInt();;
-                real.altura=leer.readFloat();
+                real.altura=leer.readInt();
                 for(int j=0;j<25;j++){
                     caracteres[j]=leer.readChar();
                 }
