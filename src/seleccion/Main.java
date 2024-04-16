@@ -1,14 +1,17 @@
 package seleccion;
 
+import ejemplos.singleton.DatabaseConnection;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
+    public java.sql.Connection con= DatabaseConnection.getInstance().getConnection();
+
     public static void main(String[] args) throws SQLException, IOException {
-        //usuario:angel123
-        //pass:1234
+
 
         int opcionUsuario = 0;
         Scanner miEscaner = new Scanner(System.in);
@@ -54,6 +57,5 @@ public class Main {
                     break;
             }
         }
-
     }
 }
