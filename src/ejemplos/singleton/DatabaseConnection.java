@@ -47,7 +47,6 @@ public class DatabaseConnection
                 String username = "dora123";
                 String password = "dora123";
                 con = java.sql.DriverManager.getConnection( host, username, password );
-                //System.out.println("Conexión realizada");//TODO traza
             } catch (java.sql.SQLException ex) {
                 System.out.println("Se ha producido un error al conectar: " + ex.getMessage());
             }

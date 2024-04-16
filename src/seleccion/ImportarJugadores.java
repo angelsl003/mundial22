@@ -35,21 +35,6 @@ public class ImportarJugadores {
             }
         } catch (java.sql.SQLException ex){
             System.out.println("Error "+ex.getMessage());
-        } finally {
-            try{
-                if(statement!=null && !statement.isClosed()){
-                    statement.close();
-                }
-            }catch (java.sql.SQLException ex){
-                System.out.println("Error "+ex.getMessage());
-            }
-            try {
-                if(con!=null && !con.isClosed()){
-                    con.close();
-                }
-            }catch (java.sql.SQLException ex){
-                System.out.println("Error "+ex.getMessage());
-            }
         }
 	}
 }

@@ -91,9 +91,8 @@ public class Registros {
 		int elemento=0;
 		String modificacion="";
 		try{
-			statement= con.createStatement();
-			System.out.println("modificar jugador");
-			jugador= esc.nextLine();
+			statement = con.createStatement();
+			jugador = esc.nextLine();
 			System.out.println("que quieres cambiar?");
 			for (int i = 0; i<elementosJugador.length;i++){
 				System.out.print(i+1+"-"+elementosJugador[i]+"\t");
@@ -118,14 +117,7 @@ public class Registros {
 			}catch (java.sql.SQLException ex){
 				System.out.println("Error "+ex.getMessage());
 			}
-			try {
-				if(con!=null && !con.isClosed()){
-					con.close();
-				}
-			}catch (java.sql.SQLException ex){
-				System.out.println("Error "+ex.getMessage());
 
-			}
 		}
 	}
 }
