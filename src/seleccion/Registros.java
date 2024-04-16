@@ -86,9 +86,11 @@ public class Registros {
 		Statement statement = null;
 		String sql="";
 		String jugador="";
+		String datoNuevo="";
 		int elemento=0;
 		String modificacion="";
 		try{
+			statement= con.createStatement();
 			System.out.println("modificar jugador");
 			jugador= esc.nextLine();
 			System.out.println("que quieres cambiar?");
@@ -100,7 +102,10 @@ public class Registros {
 				System.out.println("no disponible");
 				elemento= esc.nextInt();
 			}
-			sql="update jugadores set "+elementosJugador[elemento-1]+" where nombre_jugador=" +jugador;
+			System.out.println("Introduce el nuevo "+elementosJugador[elemento-1]);
+			esc.nextLine();
+			datoNuevo=esc.nextLine();
+			sql="update jugadores set "+elementosJugador[elemento-1] + "='"+datoNuevo+"'where nombre_jugador=" +jugador;
 			statement.executeUpdate(sql);
 		}catch (SQLException e){
 			System.out.println("Error "+e.getMessage());
